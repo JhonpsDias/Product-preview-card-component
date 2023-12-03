@@ -1,0 +1,99 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family-principal);
+    background-color: var(--cream);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "img information";
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: 375px;
+    background-color: var(--white);
+    border-radius: 7px;
+}
+
+.img {
+    grid-area: img;
+    object-fit: cover;
+}
+
+img {
+    border-radius: 7px 0 0 7px;
+}
+
+.information {
+    grid-area: information;
+    padding: 25px;
+}
+
+.information .product {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 9px;
+    margin-bottom: 15px;
+}
+
+.information .title-product {
+    font-family: var(--font-family-fraunces);
+    width: 200px;
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.information .description {
+    color: #939393;
+    margin-bottom: 15px;
+    width: 160px;
+}
+
+.information .preco {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.information .preco .preco-desconto {
+    font-family: var(--font-family-fraunces);
+    font-size: 2.2rem;
+    color: var(--dark-cyan);
+}
+
+.information .preco .preco-original {
+    text-decoration: line-through;
+}
+
+.btn-add {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-add::before {
+    content: '';
+    background: url(../img/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-add:hover{
+    background-color: var(--very-dark-blue);
+}
